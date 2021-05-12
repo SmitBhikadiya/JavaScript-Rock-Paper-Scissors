@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .ch-1 {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .ch-1 h2 {
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 2px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        body {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .cat-results {
+            display: flex;
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid black;
+            justify-content:space-around;
+            flex-wrap: wrap;
+        }
+
+        .cat-results img {
+            width: 150px;
+            height: 150px;
+            margin: 5px;
+            box-shadow: 0px 10px 50px black;
+        }
+
+        .rps-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .rps-box img {
+            padding:5px;
+            width: 120px;
+            height: 135px;
+        }
+
+        .rps-box img:hover {
+           box-shadow: 0px 10px 50px blue;
+        }
+        .rps-box h2{
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="ch-1 mt-2">
+        <h2>Challenge 1: Your Age in Days</h2>
+        <div class="buttons">
+            <button id="click_btn" class="btn btn-primary" onclick="ageInDays()">Click Me</button>
+            <button id="click_reset" class="btn btn-danger" onclick="resetMe()">Reset</button>
+        </div>
+        <div class="results">
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <div class="ch-1 mt-2">
+        <h2>Challenge 2: Cat Generator</h2>
+        <div class="buttons">
+            <button id="click_catGenerate" class="btn btn-success" onclick="catGenerator()">Generate Cat</button>
+        </div>
+        <div class="cat-results" id="cat-results">
+
+        </div>
+    </div>
+
+    <div class="ch-1 mt-2">
+        <h2>Challenge 3: Rock, Paper, Scissors</h2>
+        <div class="rps-box" id="rps-box">
+            <img src="static/img/rock.png" id="rock" class="rock" alt="rock" onclick="rpsGame(this)">
+            <img src="static/img/paper.png" id="paper" class="paper" alt="paper" onclick="rpsGame(this)">
+            <img src="static/img/scissor.png" id="scissor" class="scissor" alt="scissor" onclick="rpsGame(this)">
+        </div>
+    </div>
+    <script src="static/js/index.js"></script>
+</body>
+
+</html>
